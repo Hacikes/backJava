@@ -14,7 +14,7 @@ public class BearerTokenAuthenticationEntryPoint implements AuthenticationEntryP
     private static final String ERROR_MESSAGE_401 = "Full authentication is required to access this resource";
 
     @Override
-    public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException, ServletException {
+    public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException {
         response.sendError(HttpServletResponse.SC_UNAUTHORIZED, ERROR_MESSAGE_401);
     }
 }
